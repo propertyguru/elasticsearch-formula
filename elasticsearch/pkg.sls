@@ -12,6 +12,9 @@ elasticsearch_pkg:
     {% if elasticsearch.version %}
     - version: {{ elasticsearch.version }}
     {% endif %}
+    {% if elasticsearch_map.hold %}
+    - hold: {{ elasticsearch.hold }}
+    {% endif %}
     {% if elasticsearch_map.use_repo %}
     - require:
       - sls: elasticsearch.repo
