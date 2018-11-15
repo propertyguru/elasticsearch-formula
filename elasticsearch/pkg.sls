@@ -13,7 +13,7 @@ elasticsearch_pkg:
     - version: {{ elasticsearch.version }}
     {% endif %}
     {% if elasticsearch_map.hold %}
-    - hold: {{ elasticsearch.hold }}
+    - hold: True # Hold package from auto upgrading as some custom plugins are built for specific versions
     {% endif %}
     {% if elasticsearch_map.use_repo %}
     - require:
