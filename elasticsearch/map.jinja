@@ -2,6 +2,7 @@
     'default': {
         'pkg': 'elasticsearch',
         'use_repo': True,
+        'hold': True,
     },
 },
 merge=salt['pillar.get']('elasticsearch', {}),
